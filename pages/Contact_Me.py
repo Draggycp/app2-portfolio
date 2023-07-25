@@ -10,6 +10,7 @@ with st.form(key="email_form"):
 From: {user_email}
 {raw_message}
 """
+    message = message.encode("utf-8")
     email_button = st.form_submit_button("Submit")
     if email_button:
         send_email(message)
